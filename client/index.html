@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html ng-app="app" ng-controller="mainController as login">
+<head>
+	<base href="/">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Crossover Video Portal</title>
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+	<header class="head bg-primary">
+		<div class="container">
+			<div class="head__box">
+				<div class="head__logo" ng-click="login.gotoMainPage();">
+					<span class="glyphicon glyphicon-play" aria-hidden="true"></span>
+					<h1>Crossover Video Portal</h1>
+				</div>
+				<div class="head__logout" ng-if="login.isLoggedIn();">
+					Hi, {{ username }}
+					<a href="#" class="btn btn-primary head__logout-button" ng-click="login.logout();">Logout</a>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<div class="wrapper">
+		<div ng-view></div>
+	</div>
+
+	<footer class="foot bg-primary">
+		<div class="container foot__box">
+			<span>&copy; 2017</span>
+		</div>
+	</footer>
+
+	<script src="js/main.js"></script>
+</body>
+</html>

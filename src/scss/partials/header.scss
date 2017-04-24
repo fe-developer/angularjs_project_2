@@ -1,0 +1,45 @@
+.head {
+	height: 5rem;
+	.container {
+		height: inherit;
+	}
+
+	&__box {
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+		height: inherit;
+	}
+	
+	&__logo {
+		flex-grow: 1;
+
+		.glyphicon-play {
+			margin-right: 1rem;
+			@media (max-width: 530px) {
+				margin-right: 0.5rem;
+			}
+		}
+
+		h1 {
+			@media (max-width: 480px) {
+				display: none;
+			}
+		}
+
+		cursor: pointer;
+		transition: all ease 0.3s;
+
+		&:hover {
+			opacity: 0.8;
+			transition: all ease 0.3s;
+		}
+	}
+
+	&__logout {
+		&-button {
+			margin-left: 2rem;
+		}
+	}
+}

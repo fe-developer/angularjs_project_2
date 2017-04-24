@@ -1,0 +1,1 @@
+angular.module('app', ['authService', 'mainCtrl', 'appRoute', 'videoCtrl', 'videoService']);

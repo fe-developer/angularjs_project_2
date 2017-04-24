@@ -1,0 +1,71 @@
+.watchvideo {
+	padding: 0;
+
+	&__play {
+		padding: 4rem 1.5rem;
+
+		.videoplay {
+			&__title {
+				font-size: 2rem;
+				font-weight: 700;
+				margin-bottom: 2rem;
+			}
+
+			&__player {
+				width: 50rem;
+				height: 35rem;
+				display: block;
+				margin: 0 auto;
+				margin-bottom: 2rem;
+
+				@media (max-width: 991px) {
+					width: 35rem;
+					height: 25rem;
+				}
+
+				@media (max-width: 480px) {
+					width: 90%;
+					height: 20rem;
+				}
+			}
+		}
+	}
+
+	&__sidebar {
+		padding: 4rem 1.5rem 4rem 1.5rem;
+		border-left: 1px #ddd solid;
+
+		@media (max-width: 767px) {
+			border-left: none;
+			border-top: 1px #ddd solid;
+		}
+
+		.videoitem {
+			height: auto;
+			margin-bottom: 1.5rem;
+			font-size: 1.4rem;
+			
+
+			@media (max-width: 767px) {
+				max-width: 211px;
+				margin: 1.5rem auto;
+				height: 31rem;
+			}
+
+			&__desc {
+				height: auto;
+				max-height: 8.4rem;
+			}
+		}
+	}
+
+	&__watchmore {
+		&-box {
+			text-align: right;
+			clear: both;
+		}
+
+		font-size: 1.4rem;
+
+	}
+}

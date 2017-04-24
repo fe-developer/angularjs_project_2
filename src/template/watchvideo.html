@@ -1,0 +1,24 @@
+<div class="watchvideo container" ng-controller="watchController">
+	<div class="col-md-9 col-sm-8 watchvideo__play videoplay">
+		<div class="videoplay__title">{{ singlevideo.name }}</div>
+		<video src="{{ singlevideo.url }}" controls autoplay class="videoplay__player"></video>
+		<div class="videoplay__desc">
+			{{ singlevideo.description }}
+		</div>
+	</div>
+	<div class="col-md-3 col-sm-4 watchvideo__sidebar">
+
+		<div class="videoitem" ng-repeat="video in videos" ng-click="watchvideo(video._id)">
+			<div class="videoitem__title">{{ video.name }}</div>
+			<div class="videoitem__img">
+				<img src="{{ video.video_bg }}" alt="" class="img-responsive">
+				<span class="glyphicon glyphicon-play" aria-hidden="true"></span>
+			</div>
+			<div class="videoitem__desc">{{ video.description }}</div>
+		</div>
+		
+		<div class="watchvideo__watchmore-box">
+			<a href="/" class="watchvideo__watchmore">Watch more videos</a>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,110 @@
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  height: 100%;
+  min-height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  font-family: sans-serif;
+  font-size: 0.625rem;
+  -webkit-tap-highlight-color: transparent;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  font-weight: 400;
+  font-size: $size-font-base;
+  line-height: 1.5;
+  color: $color-font-body;
+  background-color: #fff;
+  min-height: 100%;
+  background-color: #fcfcfc;
+  position: relative;
+  width: 100%;
+  min-width: 320px;
+  height: 100%;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
+
+h1 {
+  font-size: $size-font-h1;
+  display: inline;
+}
+
+h2 {
+  font-size: $size-font-h2;
+  color: $color-font-headings;
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  padding-left: 0.5rem !important;
+  padding-right: 0 !important;
+  @media (max-width: 991px) {
+    font-size: 1.6rem;
+  }
+}
+
+ul {
+    padding: 0;
+}
+
+li {
+  list-style: none;
+  position: relative;
+}
+
+a, a:hover, a:focus {
+  color: #a6a8ab;
+}
+
+a:focus {
+  outline: 0;
+}
+
+button {
+  background: none;
+  border: none;
+}
+
+.btn {
+  border-radius: 0;
+  border: 1px #ccc solid;
+}
+
+.btn-default {
+  background: #eee;
+}
+
+.btn-primary {
+  background: #265a88;
+  border-color: #337ab7;
+}
+
+button:focus {
+  outline: 0;
+}
+
+.form-control {
+  border-radius: 0;
+  border: 1px #ddd solid;
+  box-shadow: none;
+}
+
+.wrapper {
+  min-height: 100%;
+  margin-top: -8rem;
+  padding-top: 8rem;
+}

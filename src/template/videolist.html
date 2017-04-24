@@ -1,0 +1,14 @@
+<div class="videolist container" id="videolist" ng-controller="videoController" scroll>
+	<div class="col-md-3 col-sm-4 col-xs-6 videoitem-container" ng-repeat="video in videos" data-id="{{ video._id }}" ng-click="watchvideo(video._id)">
+		<div class="videoitem">
+			<div class="videoitem__title">{{ video.name }}</div>
+			<div class="videoitem__img">
+				<img src="{{ video.video_bg }}" alt="" class="img-responsive">
+				<span class="glyphicon glyphicon-play" aria-hidden="true"></span>
+			</div>
+			<div class="videoitem__desc">{{ video.description }}</div>
+		</div>
+	</div>
+
+	<div class="videolist__loading hidden" id="loadMoreVideosSVG"><img src="../img/icons/svg-preloader.svg" alt="" class="videolist__loading-icon"> loading</div>
+</div>

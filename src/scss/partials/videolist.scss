@@ -1,0 +1,98 @@
+.videolist {
+	padding: 2.5rem 0;
+	font-size: 1.4rem;
+
+	&__loading {
+		clear: both;
+		text-align: center;
+
+		&-icon {
+			width: 3rem;
+			height: 3rem;
+		}
+	}
+}
+
+.videoitem {
+	&-container {
+		padding: 1.5rem;
+
+		@media (max-width: 480px) {
+			width: 100%;
+		}
+	}
+
+	padding: 1.5rem;
+	border: 1px #ddd solid;
+	height: 31rem;
+	transition: all 0.3s;
+	cursor: pointer;
+
+	&:hover {
+		transform: scale(1.04, 1.04);
+		transition: all 0.3s;
+		box-shadow: 0 5px 20px 3px rgba(0, 0, 0, 0.2);
+		border: none;
+	}
+
+	&__title {
+		font-weight: 700;
+		height: 4rem;
+		margin-bottom: 1rem;
+		display: block; /* Fallback for non-webkit */
+  	display: -webkit-box;
+	  -webkit-line-clamp: 2;
+	  -webkit-box-orient: vertical;
+	  overflow: hidden;
+	  text-overflow: ellipsis;
+	}
+
+	&__img {
+		height: 12.8rem;
+		min-height: 12.8rem;
+		overflow: hidden;
+		margin-bottom: 1rem;
+		position: relative;
+		border: 1px #ddd solid;
+
+		@media (max-width: 480px) {
+			height: 20rem;
+		}
+
+		@media (max-width: 380px) {
+			height: 13rem;
+		}
+
+		img {
+			min-height: inherit;
+		}
+
+		.glyphicon-play {
+			position: absolute;
+			font-size: 3rem;
+			border-radius: 50%;
+			border: 4px #fff solid;
+			width: 5rem;
+			height: 5rem;
+			padding: 0.5rem 0 0 0.8rem;
+			left: calc(50% - 2.5rem);
+			top: calc(50% - 2.5rem);
+			color: #fff;
+
+			box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+			text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+		}
+	}
+
+	&__desc {
+		font-size: 1.4rem;
+		display: block; /* Fallback for non-webkit */
+  	display: -webkit-box;
+  	height: 8.4rem; /* Fallback for non-webkit */
+	  margin: 0 auto;
+	  -webkit-line-clamp: 4;
+	  -webkit-box-orient: vertical;
+	  overflow: hidden;
+	  text-overflow: ellipsis;
+	}
+}
